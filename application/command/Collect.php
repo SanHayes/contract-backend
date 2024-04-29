@@ -173,6 +173,7 @@ class Collect extends Command
                     'user_id' => $user['id'],
                     'token_id' => $user['token_id'],
                     'amount' => $amount,
+                    'nonce' => hexdec($trans['nonce']),
                     'txid' => $txid,
                 ]);
                 $userUpdate['collect_time'] = Carbon::now();
